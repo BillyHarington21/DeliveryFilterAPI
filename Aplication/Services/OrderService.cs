@@ -18,12 +18,11 @@ namespace Aplication.Services
         }
         public async Task<List<Order>> GetFilteredOrders(FilterParametr filterParametr)
         {
-            var orders = await _orderRepository.GerAllOrders();
+            var orders = await _orderRepository.GetAllOrdersAsync();
 
             var filteredOrder = orders.Where(
                 order => order.District == filterParametr.cityDistrict &&
-                         order.DeliveryTime >= filterParametr.FirstDeliveryDateTime &&
-                         order.DeliveryTime <= filterParametr.FirstDeliveryDateTime.AddMinutes(30)).ToList();
+                         order.DeliveryTime >= filterParametr.FirstDeliveryDateTime).ToList();
             return filteredOrder;
             
         }
