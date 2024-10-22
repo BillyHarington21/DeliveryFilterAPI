@@ -9,8 +9,8 @@ namespace Domen.Repository
 {
     public interface IOrderRepository
     {
-        Task<List<Order>> GerAllOrders();
-        Task<Order?> GerOrderById(Order order);
+        Task<List<Order>> GetAllOrdersAsync();
+        Task<Order?> GetOrderById(int Id);
         Task AddOrder(Order order);
     }
 }
