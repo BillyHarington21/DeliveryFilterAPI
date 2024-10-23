@@ -1,0 +1,33 @@
+[
+
+  {
+    "Id": 1,
+    "Weight": 5.2,
+    "District": "District A",
+    "DeliveryTime": "2024-10-22T12:30:00"
+  },
+  {
+    "Id": 2,
+    "Weight": 3.5,
+    "District": "District A",
+    "DeliveryTime": "2024-10-22T12:45:00"
+  },
+  {
+    "Id": 3,
+    "Weight": 2.1,
+    "District": "District B",
+    "DeliveryTime": "2024-10-22T13:00:00"
+  },
+  {
+    "Id": 4,
+    "Weight": 4.0,
+    "District": "District A",
+    "DeliveryTime": "2024-10-22T12:55:00"
+  },
+  {
+    "Id": 5,
+    "Weight": 1.5,
+    "District": "District B",
+    "DeliveryTime": "2024-10-22T13:30:00"
+  }
+]
