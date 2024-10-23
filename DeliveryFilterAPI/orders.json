@@ -4,7 +4,7 @@
     "Id": 1,
     "Weight": 5.2,
     "District": "District A",
-    "DeliveryTime": "2024-10-22T12:29:00"
+    "DeliveryTime": "2024-10-22T12:30:00"
   },
   {
     "Id": 2,
@@ -22,7 +22,7 @@
     "Id": 4,
     "Weight": 4.0,
     "District": "District A",
-    "DeliveryTime": "2024-10-22T13:15:00"
+    "DeliveryTime": "2024-10-22T12:55:00"
   },
   {
     "Id": 5,

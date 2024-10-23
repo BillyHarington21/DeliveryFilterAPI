@@ -1,6 +1,7 @@
 ﻿using Aplication.Services;
 using Domen.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace DeliveryFilterAPI.Controllers
 {
@@ -17,6 +18,8 @@ namespace DeliveryFilterAPI.Controllers
         [HttpGet]
         public async Task<ActionResult> GetFilteredOrders(string district, DateTime firstDataTimeDelivery)
         {
+            Log.Information("Запрос на фильтрацию заказов для района: {District}, время: {DateTime}", district, firstDataTimeDelivery);
+
             var filterParametr = new FilterParametr
             {
                 cityDistrict = district,
@@ -24,6 +27,9 @@ namespace DeliveryFilterAPI.Controllers
             };
 
             var filteredOrders = await _orderService.GetFilteredOrders(filterParametr);
+
+            Log.Information("Фильтрация завершена: найдено {Count} заказов", filteredOrders.Count);
+
             return Ok(filteredOrders);
         }
     }

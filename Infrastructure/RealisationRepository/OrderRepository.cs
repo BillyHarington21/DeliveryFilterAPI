@@ -33,17 +33,5 @@ namespace Infrastructure.RealisationRepository
             var orders = await GetAllOrdersAsync();
             return orders.FirstOrDefault(order => order.Id == Id);
         }
-
-        public async Task AddOrder(Order order)
-        {
-            var orders = await GetAllOrdersAsync();
-            orders.Add(order);
-
-            using ( var writer = new StreamWriter(_filePath))
-            {
-                var json = JsonConvert.SerializeObject(orders, Formatting.Indented);
-                await writer.WriteAsync(json);
-            }
-        }
     }
 }

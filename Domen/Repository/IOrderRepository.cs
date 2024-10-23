@@ -11,6 +11,5 @@ namespace Domen.Repository
     {
         Task<List<Order>> GetAllOrdersAsync();
         Task<Order?> GetOrderById(int Id);
-        Task AddOrder(Order order);
     }
 }

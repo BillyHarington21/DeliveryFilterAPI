@@ -22,7 +22,8 @@ namespace Aplication.Services
 
             var filteredOrder = orders.Where(
                 order => order.District == filterParametr.cityDistrict &&
-                         order.DeliveryTime >= filterParametr.FirstDeliveryDateTime).ToList();
+                         order.DeliveryTime >= filterParametr.FirstDeliveryDateTime &&
+                         order.DeliveryTime <= filterParametr.FirstDeliveryDateTime.AddMinutes(30)).ToList();
             return filteredOrder;
             
         }
